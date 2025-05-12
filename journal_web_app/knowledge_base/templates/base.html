@@ -14,10 +14,9 @@
   {% block header %}
     <nav class="mb-12 relative z-10 bg-[#4e5858] p-4">
       <ul class="flex justify-evenly drop-shadow-[0_0_0.5rem_rgb(5,_5,_5)]">
-          <li><a href="{% url 'home' %}" class="underline">Home</a></li>
-          <li><a href="{% url 'about' %}" class="underline">About</a></li>
+        {% url 'home' as home_url %}
+          <li><a href="{{ home_url|default:'#' }}" class="underline">Home</a></li>
           <li id="nav-games" class="group">
-              <a href="{% url 'games' %}" class="relative underline pb-[0.3rem]">Games</a>
               <span
                 class="drop-btn absolute pl-1 pb-[0.3rem] -top-[0.1rem] cursor-pointer transform origin-[60%_50%] transition-transform duration-200 group-hover:rotate-180"
               >
@@ -41,7 +40,6 @@
               </ul>
             </li>
           <li><a href="" class="underline">Search</a></li>
-          <li><a href="{% url 'contact' %}" class="underline">Contact</a></li>
       </ul>
     </nav>
     <h1 class="text-[3rem] xl:ml-60 lg:ml-40 md:ml-20">

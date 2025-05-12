@@ -173,3 +173,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 migrations/
+
+# Node
+node_modules
+package.json
+pnpm-lock.yaml
