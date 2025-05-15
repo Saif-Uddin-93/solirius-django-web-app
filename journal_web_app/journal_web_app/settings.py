@@ -10,14 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-DEBUG = True
-
 
 from pathlib import Path
 import environ
 # Initialise environment variables
 env = environ.Env()
 environ.Env.read_env()
+
+DEBUG = env("DEBUG", default=False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,9 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 
-ALLOWED_HOSTS = [
-    'localhost', '127.0.0.1',
-    ]
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 
 # Application definition
