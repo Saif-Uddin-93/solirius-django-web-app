@@ -150,7 +150,7 @@ git:
 tailwind:
 	@echo "running tailwind"
 	( \
-		tailwindcss -i 'journal_web_app/knowledge_base/static/css/input.css' -o 'journal_web_app/knowledge_base/static/css/output.css' --watch; \
+		tailwindcss -i './journal_web_app/knowledge_base/static/css/input.css' -o './journal_web_app/knowledge_base/static/css/output.css' --watch; \
 	)
 
 
