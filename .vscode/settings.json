@@ -1,0 +1,14 @@
+// {
+//      "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+// }
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true,
+  "tailwindCSS.experimental.configFile": "./journal_web_app/knowledge_base/static/css/input.css",
+  "tailwindCSS.includeLanguages": {
+    "django-html": "html"
+  }
+}
